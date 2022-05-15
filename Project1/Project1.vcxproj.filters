@@ -90,6 +90,9 @@
     <ClCompile Include="PlayerFoot.cpp">
       <Filter>Player</Filter>
     </ClCompile>
+    <ClCompile Include="Editor.cpp">
+      <Filter>ソースファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ActFlag.h">
@@ -154,6 +157,9 @@
     </ClInclude>
     <ClInclude Include="PlayerFoot.h">
       <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor.h">
+      <Filter>ヘッダーファイル</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

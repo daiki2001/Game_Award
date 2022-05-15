@@ -1,6 +1,7 @@
 #include "SceneManager.h"
 #include "GameScene.h"
 #include "Title.h"
+#include "Editor.h"
 
 //Raki_DX12B         *SceneManager::dx12b  = nullptr;
 //NY_Object3DManager *SceneManager::objmgr = nullptr;
@@ -9,7 +10,7 @@
 SceneManager::SceneManager() :mNextScene(eScene_None) {
 
     //初回軌道するシーンはここで定義
-    nowScene = (BaseScene*)new Title(this);
+    nowScene = (BaseScene*)new Editor(this);
     Initialize();
 }
 
@@ -37,7 +38,9 @@ void SceneManager::Update()
             nowScene = (BaseScene*)new GameScene(this);
             break;
             // ----- シーンを追加するときは、上のようにenumに定義した定数で分岐させて、nowSceneに該当シーンをnewで生成すること ----- //
-
+        case editor:
+            nowScene = (BaseScene*)new GameScene(this);
+            break;
 
         }
         mNextScene = eScene_None;    //次のシーン情報をクリア

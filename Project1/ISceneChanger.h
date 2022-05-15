@@ -6,6 +6,7 @@ typedef enum {
     eScene_Title,   //タイトル画面
     eScene_Game,    //ゲーム画面
     // ----- シーン追加時はここにシーン番号の宣言をすること！ ----- //
+    editor, //エディター用
 
     eScene_None,    //無し
 } eScene;
